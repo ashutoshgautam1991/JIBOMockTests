@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mock Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="tabs">
+    <button onclick="switchSection('credit')">Credit & Trade Finance</button>
+    <button onclick="switchSection('operations')">Operations</button>
+    <button onclick="switchSection('ga')">General Awareness</button>
+    <button onclick="switchSection('aptitude')">Aptitude</button>
+  </div>
+  <div class="timer" id="timer">120:00</div>
+</div>
+
+<div class="container">
+  <div class="question-area">
+    <h2 id="q-title"></h2>
+    <p id="q-text"></p>
+    <div id="options"></div>
+
+    <button onclick="markForReview()">Mark for Review & Next</button>
+    <button onclick="clearResponse()">Clear Response</button>
+    <button onclick="saveNext()">Save & Next</button>
+  </div>
+
+  <div class="sidebar">
+    <div class="legend">
+      <div><span class="box answered"></span> Answered</div>
+      <div><span class="box not-answered"></span> Not Answered</div>
+      <div><span class="box not-visited"></span> Not Visited</div>
+      <div><span class="box review"></span> Marked for Review</div>
+    </div>
+
+    <div class="grid" id="q-grid"></div>
+    <button class="submit" onclick="submitTest()">Submit</button>
+  </div>
+</div>
+
+<div id="result" class="hidden"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
