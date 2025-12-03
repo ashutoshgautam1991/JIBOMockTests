@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Treasury Mock Tests - Login</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-title">Treasury Mock Tests</div>
+  </div>
+
+  <div class="auth-wrapper">
+    <div class="card auth-card">
+      <h2>Login / Sign up</h2>
+      <p class="small-muted">Use Google or email to continue.</p>
+
+      <div style="margin:12px 0">
+        <button id="googleBtn" class="btn primary" style="width:100%">Sign in with Google</button>
+      </div>
+
+      <hr style="margin:16px 0">
+
+      <form id="emailForm">
+        <div style="margin-bottom:8px">
+          <label class="small-muted">Email</label><br>
+          <input id="emailInput" type="email" required style="width:100%;padding:6px">
+        </div>
+        <div style="margin-bottom:8px">
+          <label class="small-muted">Password</label><br>
+          <input id="passwordInput" type="password" required style="width:100%;padding:6px">
+        </div>
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button type="submit" class="btn primary" style="flex:1">Login</button>
+          <button type="button" id="signupBtn" class="btn outline" style="flex:1">Sign up</button>
+        </div>
+      </form>
+
+      <p id="authMessage" class="small-muted" style="margin-top:10px"></p>
+    </div>
+  </div>
+
+  <script src="firebase-config.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

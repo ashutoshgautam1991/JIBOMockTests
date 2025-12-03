@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard - Treasury Mock Tests</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-title">Treasury Mock Tests - Dashboard</div>
+    <div>
+      <span class="topbar-user" id="userEmail"></span>
+      <button id="logoutBtn" class="btn small" style="margin-left:8px">Logout</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2>Available Tests</h2>
+      <p class="small-muted">Select a test to begin. All tests use 200 questions with 120 minutes.</p>
+
+      <table class="test-list">
+        <thead>
+          <tr><th>Test Name</th><th>Sections</th><th>Duration</th><th>Questions</th><th>Action</th></tr>
+        </thead>
+        <tbody id="testTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="firebase-config.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
