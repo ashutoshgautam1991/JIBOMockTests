@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Treasury Mock Test — 200 Qs</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Treasury Mock Test — 200 Qs</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Start modal -->
@@ -12,18 +12,18 @@
     <div class="modal-card">
       <h2>Treasury Mock Test</h2>
       <p>200 Questions — 120 minutes — 25% negative marking</p>
-      <button id="startTestBtn" class="primary">Start Test</button>
+      <button id="startTestBtn" class="btn primary">Start Test</button>
     </div>
   </div>
 
   <div class="container">
     <!-- Left controls -->
     <aside class="left-col">
-      <button id="markReviewNextBtn">Mark for Review & Next</button>
-      <button id="clearResponseBtn">Clear Response</button>
+      <button id="markReviewNextBtn" class="btn">Mark for Review & Next</button>
+      <button id="clearResponseBtn" class="btn">Clear Response</button>
       <div style="flex:1"></div>
-      <button id="saveNextBtn" class="primary">Save & Next</button>
-      <button id="submitBtn">Submit</button>
+      <button id="saveNextBtn" class="btn primary">Save & Next</button>
+      <button id="submitBtn" class="btn">Submit</button>
     </aside>
 
     <!-- Center -->
@@ -45,12 +45,11 @@
         <div class="options" id="optionsWrapper"></div>
 
         <div class="controls">
-          <button id="prevBtn">&larr; Prev</button>
-          <button id="nextBtn">Next &rarr;</button>
-          <button id="reviewBtn">Mark for Review</button>
-          <button id="clearBtn">Clear Response</button>
+          <button id="prevBtn" class="btn">&larr; Prev</button>
+          <button id="nextBtn" class="btn">Next &rarr;</button>
+          <button id="reviewBtn" class="btn">Mark for Review</button>
+          <button id="clearBtn" class="btn">Clear Response</button>
         </div>
-
       </div>
     </main>
 
@@ -70,9 +69,10 @@
       <div class="palette">
         <div class="legend">
           <div><span class="dot not-visited"></span> Not Visited</div>
+          <div><span class="dot not-answered"></span> Not Answered</div>
           <div><span class="dot answered"></span> Answered</div>
           <div><span class="dot marked"></span> Marked for Review</div>
-          <div><span class="dot not-answered"></span> Not Answered</div>
+          <div><span class="dot marked-answered"></span> Marked &amp; Answered</div>
         </div>
 
         <div id="countsText" class="counts">Visited: 0 | Answered: 0 | Marked: 0 | Not Answered: 200</div>
@@ -88,7 +88,7 @@
       <h3>Test Submitted</h3>
       <div id="resultSummary">Calculating...</div>
       <div style="margin-top:12px;text-align:right">
-        <button id="closeModal">Close</button>
+        <button id="closeModal" class="btn">Close</button>
       </div>
     </div>
   </div>

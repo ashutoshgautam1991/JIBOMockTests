@@ -1,18 +1,40 @@
-Treasury Mock Test — Complete Exam Engine (200 questions)
+# Treasury Mock Test Engine (Final v2)
 
-Files:
-- index.html  : main webpage
-- style.css   : styling
-- script.js   : logic (questions, timer, marking, save, scoring, analysis)
+Features:
+- 200 questions (sample text), 50 per section:
+  - Credit & Trade Finance
+  - Operations
+  - General Awareness
+  - Aptitude
+- 120-minute timer (starts when you click "Start Test")
+- Right-side question palette:
+  - Shows only 50 questions for the current section
+  - Colors:
+    - Gray = Not Visited
+    - Red = Not Answered
+    - Green = Answered
+    - Orange = Marked for Review
+    - Purple = Marked & Answered
+- Mark for Review / Mark & Next / Clear Response / Save & Next
+- Auto-save of answers and timer in browser (localStorage)
+- Scoring:
+  - +1 for each correct answer
+  - -0.25 for each wrong answer
+  - 0 for unattempted
+- Result analysis:
+  - Overall score
+  - Correct / Wrong / Unattempted
+  - Per-topic accuracy
+  - Strong and weak area suggestion
 
-How to use:
-1. Upload all three files to your GitHub repository (root of main branch).
-2. Enable GitHub Pages -> Branch: main, Folder: root.
-3. Open the URL https://YOUR_USERNAME.github.io/YOUR_REPO/
-4. On load you'll see a Start Test modal. Click 'Start Test' to begin timer.
-5. Use tabs to switch sections (50 questions per section). Question palette on right shows 1..200.
-6. Answers are auto-saved to localStorage. Submit to see score, per-topic breakdown and suggested weak/strong areas.
+## How to use with GitHub Pages
 
-Notes:
-- Each question = 1 mark. Wrong answer = -0.25 mark.
-- Questions are placeholder samples. Replace 'questions' data in script.js with your real content when ready.
+1. Upload `index.html`, `style.css`, and `script.js` to the root of your repository's `main` branch.
+2. In the repo, go to Settings → Pages.
+3. Set:
+   - Source: Deploy from a branch
+   - Branch: main
+   - Folder: /(root)
+4. Save and open the published URL.
+
+To add real questions, edit the `questions` generation in `script.js` and replace the sample text and correct answers.
