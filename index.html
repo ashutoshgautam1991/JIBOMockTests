@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Treasury Mock Test — 200 Qs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Start modal -->
+  <div id="startModal" class="modal">
+    <div class="modal-card">
+      <h2>Treasury Mock Test</h2>
+      <p>200 Questions — 120 minutes — 25% negative marking</p>
+      <button id="startTestBtn" class="primary">Start Test</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Left controls -->
+    <aside class="left-col">
+      <button id="markReviewNextBtn">Mark for Review & Next</button>
+      <button id="clearResponseBtn">Clear Response</button>
+      <div style="flex:1"></div>
+      <button id="saveNextBtn" class="primary">Save & Next</button>
+      <button id="submitBtn">Submit</button>
+    </aside>
+
+    <!-- Center -->
+    <main class="center-col">
+      <div class="tabs" id="topicTabs"></div>
+
+      <div class="question-panel" id="questionPanel">
+        <div class="q-top">
+          <div>
+            <div class="small-muted" id="topicLabel">Topic</div>
+            <div class="q-text" id="qText">Question text will appear here</div>
+          </div>
+          <div style="text-align:right">
+            <div class="small-muted">Question</div>
+            <div id="qIndex" class="big">1 / 200</div>
+          </div>
+        </div>
+
+        <div class="options" id="optionsWrapper"></div>
+
+        <div class="controls">
+          <button id="prevBtn">&larr; Prev</button>
+          <button id="nextBtn">Next &rarr;</button>
+          <button id="reviewBtn">Mark for Review</button>
+          <button id="clearBtn">Clear Response</button>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Right palette -->
+    <aside class="right-col">
+      <div class="timer-card">
+        <div>
+          <div class="small-muted">Timer</div>
+          <div id="mainTimer" class="timer">120:00</div>
+        </div>
+        <div style="text-align:right">
+          <div class="small-muted">Progress</div>
+          <div id="progressSummary" class="big">0 / 200</div>
+        </div>
+      </div>
+
+      <div class="palette">
+        <div class="legend">
+          <div><span class="dot not-visited"></span> Not Visited</div>
+          <div><span class="dot answered"></span> Answered</div>
+          <div><span class="dot marked"></span> Marked for Review</div>
+          <div><span class="dot not-answered"></span> Not Answered</div>
+        </div>
+
+        <div id="countsText" class="counts">Visited: 0 | Answered: 0 | Marked: 0 | Not Answered: 200</div>
+
+        <div id="paletteGrid" class="palette-grid"></div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Result modal -->
+  <div id="resultModal" class="modal" style="display:none">
+    <div class="modal-card">
+      <h3>Test Submitted</h3>
+      <div id="resultSummary">Calculating...</div>
+      <div style="margin-top:12px;text-align:right">
+        <button id="closeModal">Close</button>
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
